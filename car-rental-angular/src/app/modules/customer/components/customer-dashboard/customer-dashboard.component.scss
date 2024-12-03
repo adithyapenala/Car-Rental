@@ -1,0 +1,42 @@
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Align cards in a flexible manner */
+  }
+  
+  .inner-content {
+    width: 100%; /* Default to full width for mobile */
+    max-width: 300px; /* Limit max width for desktop */
+    margin: 10px; /* Space between cards */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+    transition: transform 0.3s; /* Animation effect */
+  }
+  .cardstyle {
+    background-color: rgba(255, 255, 255, 1); /* Semi-transparent background */
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15); /* Subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover transition */
+  }
+  
+  .cardstyle:hover {
+    transform: scale(1.05); /* Enlarge card on hover */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Deep shadow on hover */
+  }
+  .book-btn {
+    padding: 8px 16px;
+    border-radius: 2px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    background-color: #007bff;
+    color: rgb(255, 255, 255);
+
+      &:hover {
+        transform: scale(1.1); ;
+      }
+    
+}
+  

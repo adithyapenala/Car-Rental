@@ -1,0 +1,40 @@
+/* Ensure responsive styling */
+.responsive-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background-color: #f8fafc; /* Slight background for the table */
+    border-radius: 8px; /* Smooth corners */
+    overflow: hidden; /* Clip content that overflows */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+  
+  .responsive-table th,
+  .responsive-table td {
+    padding: 12px 16px;
+    text-align: left;
+    border: 1px solid #e2e8f0; /* Subtle border */
+  }
+  
+  .responsive-table th {
+    background-color: #cbd5e1; /* Header background color */
+    font-weight: bold;
+  }
+  
+  .responsive-table tbody tr:nth-child(odd) {
+    background-color: #f1f5f9; /* Alternating row colors */
+  }
+  
+  .responsive-table tbody tr:hover {
+    background-color: #e2e8f0; /* Hover effect */
+  }
+  
+  /* For smaller screens, make the table scrollable */
+  @media (max-width: 768px) {
+    .responsive-table {
+      display: block;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+  }
+  

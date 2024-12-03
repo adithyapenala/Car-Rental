@@ -1,0 +1,27 @@
+// nz-select {
+//   width: 200px !important;
+// }
+.card-container {
+    max-width: 40%; 
+    max-height: 35%;
+    margin: 0 auto; 
+    border: 3rem solid transparent;
+    padding: 1.5rem; 
+    background-color: #ffffff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); 
+  }
+.inner-content {
+    max-width: 100%; 
+    padding: 1.5rem; 
+    box-shadow: 2px; 
+    background: none; 
+    
+  }
+.btn {
+    padding: 8px 16px;
+    border-radius: 2px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px ;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }

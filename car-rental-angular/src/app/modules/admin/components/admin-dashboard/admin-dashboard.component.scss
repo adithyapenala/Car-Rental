@@ -1,0 +1,108 @@
+
+
+.padding-top {
+  padding-top: 10px;
+}
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Align cards in a flexible manner */
+}
+
+.inner-content {
+  width: 100%; /* Default to full width for mobile */
+  max-width: 300px; /* Limit max width for desktop */
+  margin: 10px; /* Space between cards */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+  transition: transform 0.3s; /* Animation effect */
+}
+
+.inner-content {
+  width: 40%; /* Adjust the width as needed */
+  max-width: 100%;
+  margin: 10px;
+  padding: 16px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.background-image {
+  background-image: url('/assets/teal-background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Card Styles */
+.cardstyle {
+  background-color: rgba(255, 255, 255, 1); /* Semi-transparent background */
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15); /* Subtle shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover transition */
+}
+
+.cardstyle:hover {
+  transform: scale(1.05); /* Enlarge card on hover */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Deep shadow on hover */
+}
+
+/* Card Image */
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+/* Card Body */
+.card-body {
+  padding: 16px;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #007bff; /* Bootstrap primary color */
+  cursor: pointer;
+}
+
+.card-text {
+  font-size: 0.9rem;
+  color: #6c757d; /* Muted text color */
+}
+
+.details small {
+  color: #6c757d; /* Muted color for details */
+}
+
+/* Action Buttons */
+.update-btn, .delete-btn {
+  border-radius: 20px;
+  font-size: 0.85rem;
+  padding: 5px 15px;
+}
+
+.update-btn {
+  border-color: #007bff;
+  color: #007bff;
+  border: 2px solid #007bff;
+  margin: 10px;
+}
+
+.delete-btn {
+  border-color: #dc3545;
+  color: #dc3545;
+  border: 2px solid  #dc3545;
+}
+
+.update-btn:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.delete-btn:hover {
+  background-color: #dc3545;
+  color: #fff;
+}
+

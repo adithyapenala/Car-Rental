@@ -1,0 +1,45 @@
+<div style=" padding: 10px;align-items: center;" *ngIf="car"
+class="min-h-screen py-3 flex flex-col justify-center ">
+  <div style="padding-top: 10px;"></div>
+
+  <div style="margin-top: 10px;" class="child grid-container justify-center">
+    <div class="shadow-lgsm:p-20">
+      <div class="image-container">
+        <img
+          class="profile"
+          [src]="car.processedImage"
+          alt="profile"
+        />
+      </div>
+      
+
+      <div style="padding-top: 24px;">
+        <h2 style="cursor: pointer; color: #108ee9;">{{car.brand}} - {{car.name}}</h2>
+
+        <p>{{car.description}}</p>
+
+        <h5>Price: <b>${{car.price}}</b> - Color : <b>{{car.color}}</b> - Transmission : <b>{{car.transmission}}</b> -
+          Type : <b>{{car.type}}</b> - Year : <b>{{car.year}}</b>
+        </h5>
+
+         <!-- Date Inputs for Booking -->
+         <form [formGroup]="validateForm">
+          <div style="margin-top: 20px;">
+            <label for="fromDate">From Date:</label>
+            <input type="date" id="fromDate" [(ngModel)]="fromDate" formControlName="fromDate"/>
+  
+            <label for="toDate" style="margin-left: 20px;">To Date:</label>
+            <input type="date" id="toDate" [(ngModel)]="toDate" formControlName="toDate"/>
+            <div class="flex justify-center pt-6">
+              <button style="min-width: 100px;" nzSize="small" class="book-btn"
+               nzType="primary" (click)="bookACar(validateForm.value)">
+                Book
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</div>

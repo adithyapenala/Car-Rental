@@ -1,0 +1,84 @@
+.custom-navbar {
+  background-color: black;
+  // background-color: #003973;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+
+  .navbar-title {
+    display: flex;
+    align-items: left;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+  
+    > a {
+      color: white !important;
+      margin-left: 10px;
+      padding: 5px;
+      font-size: 20px;
+      font-weight: bolder;
+      text-decoration: none;
+      font-family:"Playwrite AU TAS", cursive;
+    }
+  
+    > img {
+      margin-left: 15px;
+      margin-right: 10px;
+      margin-top: auto;
+      margin-bottom: auto;
+      width: 30px; /* Adjust width for consistency */
+      height: 30px; /* Ensure consistent height */
+    }
+  }
+  
+
+  .nav-links {
+    display: flex;
+    gap: 10px;
+    align-items: right;
+
+    > a{
+      transition: background-color 0.3s ease, color 0.3s ease;
+
+      &:hover{
+        background-color: #12c09e;
+      }
+    }
+
+    .btn {
+      padding: 8px 16px;
+      border-radius: 2px;
+      border: none;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: bold;
+      transition: background-color 0.3s ease, color 0.3s ease;
+
+      &.signup-btn {
+        color: white;
+
+        &:hover {
+          background-color: #12c09e;
+        }
+      }
+
+      &.login-btn {
+        color: white;
+
+        &:hover {
+          background-color: #12c09e;
+        }
+      }
+    }
+  }
+}
+
+.background-image {
+  background-image: url('/assets/teal-background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  flex: 1;
+}
+
+

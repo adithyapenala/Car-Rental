@@ -1,0 +1,52 @@
+<div *ngIf="!isAdminLoggedIn && !isCustomerLoggedIn">
+  <div class="custom-navbar">
+    <div class="navbar-title">
+      <img src="favicon.ico" alt="favicon">
+      <a routerLink="/login">Car Rental</a>
+    </div>
+
+    <div class="nav-links">
+      <button class="btn signup-btn" routerLink="/register">Sign Up</button>
+      <button class="btn login-btn" routerLink="/login">Login</button>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="isAdminLoggedIn">
+  <div class="custom-navbar">
+    <div class="navbar-title">
+      <img src="favicon.ico" alt="favicon">
+      <a routerLink="/admin/dashboard">Car Rental</a>
+    </div>
+
+    <div class="nav-links">
+      <button class="btn login-btn" routerLink="/admin/dashboard" routerLinkActive="active"> Dashboard </button>
+      <button class="btn login-btn" routerLink="/admin/car" routerLinkActive="active"> Post Car </button>
+      <button class="btn login-btn" routerLink="/admin/bookings" routerLinkActive="active"> Bookings </button>
+      <button class="btn login-btn" routerLink="/admin/search" routerLinkActive="active"> Search </button>
+
+      <button class="btn login-btn" routerLink="/login" routerLinkActive="active" (click)="logout()">Logout</button>
+
+    </div>
+  </div>
+</div>
+
+<div *ngIf="isCustomerLoggedIn">
+  <div class="custom-navbar">
+    <div class="navbar-title">
+      <img src="favicon.ico" alt="favicon">
+      <a routerLink="/customer/dashboard">Car Rental</a>
+    </div>
+
+    <div class="nav-links">
+      <button class="btn login-btn" routerLink="/customer/dashboard" routerLinkActive="active"> Dashboard </button>
+
+      <button class="btn login-btn" routerLink="/customer/my-bookings" routerLinkActive="active"> My Bookings </button>
+
+      <button class="btn login-btn" routerLink="/login" routerLinkActive="active" (click)="logout()">Logout</button>
+    </div>
+  </div>
+</div>
+<div style="flex: 1;">
+  <router-outlet></router-outlet>
+</div>

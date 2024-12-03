@@ -1,0 +1,46 @@
+
+<div  style=" min-height: 91vh; padding: 24px;">
+  <div style="padding-top: 10px;"></div>
+
+  <div class="card-container">
+    <div style="margin-top: 10px;" class="child" *ngFor="let car of cars">
+      <div nz-row class="inner-content cardstyle"
+       style="background-color: #ffffff; padding: 24px; border-radius: 10px; margin-bottom: 16px; width: 350px; max-width: 100%;">
+        <div nz-col nzSpan="24">
+          <div id="carousel-{{car.id}}" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img class="d-block w-100" [src]="car.processedImage" alt="{{car.make}} {{car.model}}">
+              </div>
+              
+            </div>
+            <a class="carousel-control-prev" href="#carousel-{{car.id}}" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carousel-{{car.id}}" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+
+        <div nz-col nzSpan="24">
+          <h2 class="card-text" style="cursor: pointer;">{{car.make}} - {{car.model}}</h2>
+
+          <p class="card-text">{{car.description}}</p>
+
+          <hr>
+
+          <h5 class="card-text" >Price: <b>${{car.price}}</b> - Color : <b>{{car.color}}</b> - Transmission : <b>{{car.transmission}}</b> - Type : <b>{{car.type}}</b> - Year : <b>{{car.year}}</b>
+          </h5>
+
+          <div class="d-flex justify-content-between mt-3">
+            <a class="btn btn-outline-primary btn-sm update-btn" [routerLink]="'/admin/car/' + car.id">Update</a>
+            <button class="btn btn-outline-danger btn-sm delete-btn" (click)="deleteCar(car.id)">Delete</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
